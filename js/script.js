@@ -15,9 +15,46 @@
 
 // Створити стрілкову функцію hello1(), яка при визові буде вертати текст “Привіт JavaScript
 
-const hello1 = (text) => {
-    return text;
+// const hello1 = (text) => {
+//     return text;
+// }
+
+// console.log(hello1("Привіт JavaScript"));
+
+
+const students = [
+     {
+  name: "Anton",
+  age: 14,
+  gender: "male",
+  grade: 10
+}
+,
+{
+    name: "Vasya",
+    age: 27,
+    gender: "male",
+    grade: 8
+  },
+
+  {
+    name: "Karina",
+    age: 47,
+    gender: "female",
+    grade: 6
+  }
+
+]
+
+
+function avarageGrades(students) {
+    let result = 0;
+    let total = 0;
+    for (const student of students) {
+        result += student.grade
+    }
+    total = result / students.length
+    return total;
 }
 
-console.log(hello1("Привіт JavaScript"));
-
+console.log(avarageGrades(students));
